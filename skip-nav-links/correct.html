@@ -7,10 +7,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/accessibility/styles.css">
 
-    <title>Correct Page Title</title>
+    <title>Skip Nav Links - Correct</title>
 </head>
-<body>
+<div id="skip"><a href="#main">Skip to main content</a></div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/accessibility">Accessibility Demos</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,17 +45,33 @@
         </ul>
     </div>
 </nav>
-<h1>Correct Page Title</h1>
-<p>Page Titles show up in your browser's tabs. They should quickly describe the page and differentiate the page from others</p>
-<h2>Correct Code</h2>
+<main id="main" role="main" class="container">
+<h1>Skip Nav Links</h1>
+  <p>Don't make everyone work through all your navigation links just to get to the main content on the page</p>
+  <p>You can show this link only when it has focus.</p>
+  <h2>How To Use</h2>
+  <ul>
+    <li>Hit tab until the "Skip to Main Content" link appears.</li>
+    <li>Hit enter to skip the navigation.</li>
+    <li>Hit tab again and you the first link will gain focus</li>
+  </ul>
+  <h2>Correct Code</h2>
 <pre><code>
-  &#x3C;head&#x3E;
-    &#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
-    &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1, shrink-to-fit=no&#x22;&#x3E;
-
-    &#x3C;title&#x3E;Correct Page Title Example&#x3C;/title&#x3E;
-  &#x3C;/head&#x3E;
+  &lt;a href=&quot;#main&quot;&gt;Skip to main content&lt;/a&gt;
+  &lt;main id=&quot;main&quot; role=&quot;main&quot;&gt;
 </code></pre>
+  <h2>Resources</h2>
+  <ul>
+    <li><a href="https://a11yproject.com/posts/skip-nav-links/">https://a11yproject.com/posts/skip-nav-links/</a></li>
+    <li><a href="https://webaim.org/techniques/css/invisiblecontent/#skipnavlinks">https://webaim.org/techniques/css/invisiblecontent/#skipnavlinks</a></li>
+  </ul>
+</main>
+
+
+
+
+
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
