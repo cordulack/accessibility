@@ -7,10 +7,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/accessibility/styles.css">
-  <title>Color Contrast Should Meet Minimum Level (AA): Incorrect</title>
-  <style>
-    body {background-color: #8a8a8a;}
-  </style>
+  <title>Pages should have a logical reading order: Correct</title>
 </head>
 <div id="skip"><a href="#main">Skip to main content</a></div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -46,32 +43,36 @@
   </div>
 </nav>
 <main id="main" role="main" class="container">
-  <h1>Incorrect: Color Contrast Should Meet Minimum Level (AA)</h1>
-  <p>The colors between the page's content and background should contrast enough so everyone can consume it.</p>
-  <h2>How much contrast is enough?</h2>
-  <p>The W3C's accessibility guidelines outline several different levels of contrast and the levels correspond to
-    "contrast ratios". If you meet the Level AA standard, the contrast ratio is 4.5:1, which "compensates for the loss
-    in contrast sensitivity usually experienced by users with vision loss equivalent to approximately 20/40 vision.
-    (20/40 calculates to approximately 4.5:1.) 20/40 is commonly reported as typical visual
-    acuity of elders at roughly age 80." The Level AAA standard's contrast ratio is 7:1 and "compensates for the loss in
-    contrast sensitivity usually experienced by users with vision loss equivalent to approximately 20/80 vision."
-  Read more here: https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html</p>
-  <h2>What is the color contrast for this page?</h2>
-  ~4.46
-  <h3>Colors</h3>
-  <ul>
-    <li>Text color: #212529</li>
-    <li>Background color: #8a8a8a</li>
-  </ul>
-  <h3>How to figure out the contrast ratio</h3>
-  <ul>
-    <li>https://contrast-ratio.com/#%23212529-on-%238a8a8a</li>
-    <li>https://contrast-finder.tanaguru.com/result.html?foreground=%23212529&background=%238a8a8a&ratio=4.5&isBackgroundTested=true&algo=HSV&distanceSort=asc</li>
-  </ul>
+  <h1>Correct: Pages should have a logical reading order</h1>
+  If one element comes before another when displayed in a browser, the code should have the same order.
+
+  <div style="position: relative; width: 400px; margin: 40px; border: 1px solid #8a8a8a; padding: 10px;">
+    <h3>Headline</h3>
+    <div style="position: absolute; top: 15px; right: 10px;">
+      <a href="#">Link 1</a> | <a href="#">Link 2</a> | <a href="#">Link 3</a>
+    </div>
+    <p>Thus they remarked that, during full moon, the disc appeared scored in certain parts with white lines; and,
+      during the phases, with black. On prosecuting the study of these with still greater precision, they succeeded in
+      obtaining an exact account of the nature of these lines. They were long and narrow furrows sunk between parallel
+      ridges, bordering generally upon the edges of the craters.</p>
+  </div>
+
+  <h2>Code</h2>
+  <pre><code>
+  &#x3C;div style=&#x22;position: relative; width: 400px; margin: 40px; border: 1px solid #8a8a8a; padding: 10px;&#x22;&#x3E;
+    &#x3C;h3&#x3E;Headline&#x3C;/h3&#x3E;
+    &#x3C;div style=&#x22;position: absolute; top: 15px; right: 10px;&#x22;&#x3E;
+      &#x3C;a href=&#x22;#&#x22;&#x3E;Link 1&#x3C;/a&#x3E; | &#x3C;a href=&#x22;#&#x22;&#x3E;Link 2&#x3C;/a&#x3E; | &#x3C;a href=&#x22;#&#x22;&#x3E;Link 3&#x3C;/a&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;p&#x3E;Thus they remarked that, during full moon, the disc appeared scored in certain parts with white lines; and,
+      during the phases, with black. On prosecuting the study of these with still greater precision, they succeeded in
+      obtaining an exact account of the nature of these lines. They were long and narrow furrows sunk between parallel
+      ridges, bordering generally upon the edges of the craters.&#x3C;/p&#x3E;
+  &#x3C;/div&#x3E;
+  </code></pre>
   <h2>Resources</h2>
   <ul>
-    <li><a href="https://a11yproject.com/posts/what-is-color-contrast/">https://a11yproject.com/posts/what-is-color-contrast/</a></li>
-    <li><a href="https://www.w3.org/WAI/test-evaluate/preliminary/#contrast">https://www.w3.org/WAI/test-evaluate/preliminary/#contrast</a></li>
+    <li>https://www.w3.org/TR/WCAG20-TECHS/C27.html</li>
   </ul>
 </main>
 
