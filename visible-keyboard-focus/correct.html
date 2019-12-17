@@ -4,10 +4,17 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style>
+    a:focus {
+      outline: 4px dotted #e73;
+      outline-offset: 4px;
+      background: #ffa;
+    }
+  </style>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/accessibility/styles.css">
-  <title>Form Fields Should Have Meaningful Labels: Incorrect</title>
+  <title>Visible Keyboard Focus - Correct</title>
 </head>
 <div id="skip"><a href="#main">Skip to main content</a></div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -28,7 +35,7 @@
           <a class="dropdown-item" href="/accessibility/vague-page-title/correct.html">Missing Page Title -- Correct</a>
         </div>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Navigation
         </a>
@@ -55,7 +62,7 @@
           <a class="dropdown-item" href="/accessibility/color-contrast/correct.html">Color Contrast -- Correct</a>
        </div>
       </li>
-      <li class="nav-item dropdown active">
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Content
         </a>
@@ -92,31 +99,22 @@
   </div>
 </nav>
 <main id="main" role="main" class="container py-2">
-  <h1>Incorrect: Form fields don't have labels that convey their purpose</h1>
-  <p>If you don't have labels, not everyone will know what a form field is for.</p>
-  <form>
-    <div class="form-group">
-      <input type="email" class="form-control" placeholder="Enter email">
-    </div>
-    <div class="form-group">
-      <input type="password" class="form-control" placeholder="Password">
-    </div>
-
-    <div class="form-group">
-      <p>Select a number</p>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-  </form>
+  <h1>Correct: Focus must be visible</h1>
+  <p>When you are using the keyboard to navigate the page, you need to be able to see what element has focus so you can select it.</p>
+  <h2>Correct Code</h2>
+  <pre><code>// from MDN example
+  a:focus {
+    outline: 4px dotted #e73;
+    outline-offset: 4px;
+    background: #ffa;
+  }
+</code></pre>
   <h2>Resources</h2>
   <ul>
-    <li><a href="https://bbc.github.io/a11y-tutorials/forms/#labels">https://bbc.github.io/a11y-tutorials/forms/#labels</a></li>
-    <li><a href="https://www.w3.org/WAI/test-evaluate/preliminary/#forms">https://www.w3.org/WAI/test-evaluate/preliminary/#forms</a></li>
+    <li><a href="https://www.w3.org/WAI/fundamentals/accessibility-principles/#keyboard">https://www.w3.org/WAI/fundamentals/accessibility-principles/#keyboard</a></li>
+    <li><a href="https://www.w3.org/WAI/test-evaluate/preliminary/#interaction">https://www.w3.org/WAI/test-evaluate/preliminary/#interaction</a></li>
+    <li><a href="https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/">https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/outline">https://developer.mozilla.org/en-US/docs/Web/CSS/outline</a></li>
   </ul>
 </main>
 

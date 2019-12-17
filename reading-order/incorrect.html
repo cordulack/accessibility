@@ -18,31 +18,80 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/accessibility">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item dropdown active">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Head Content
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/accessibility/missing-page-title/incorrect.html">Missing Page Title -- Incorrect</a>
-          <a class="dropdown-item" href="/accessibility/missing-page-title/correct.html">Missing Page Title -- Correct</a>
+          <a class="dropdown-item" href="/accessibility/vague-page-title/incorrect.html">Missing Page Title -- Incorrect</a>
+          <a class="dropdown-item" href="/accessibility/vague-page-title/correct.html">Missing Page Title -- Correct</a>
         </div>
       </li>
-      <li class="nav-item dropdown active">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Navigation
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/accessibility/skip-nav-links/incorrect.html">Skip Nav Links -- Incorrect</a>
           <a class="dropdown-item" href="/accessibility/skip-nav-links/correct.html">Skip Nav Links -- Correct</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/accessibility/visible-keyboard-focus/incorrect.html">Focus Must Be Visible -- Incorrect</a>
+          <a class="dropdown-item" href="/accessibility/visible-keyboard-focus/correct.html">Focus Must Be Visible -- Correct</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/accessibility/keyboard-focus-order/incorrect.html">Logical Tab Order -- Incorrect</a>
+          <a class="dropdown-item" href="/accessibility/keyboard-focus-order/correct.html">Logical Tab Order -- Correct</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Color
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/accessibility/color-meaning/incorrect.html">Conveying Meaning with Color -- Incorrect</a>
+          <a class="dropdown-item" href="/accessibility/color-meaning/correct.html">Conveying Meaning with Color -- Correct</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/accessibility/color-contrast/incorrect.html">Color Contrast -- Incorrect</a>
+          <a class="dropdown-item" href="/accessibility/color-contrast/correct.html">Color Contrast -- Correct</a>
+       </div>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Content
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/accessibility/headings/incorrect.html">Appropriate Use of Headings -- Incorrect</a>
+          <a class="dropdown-item" href="/accessibility/headings/correct.html">Appropriate Use of Headings -- Correct</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/accessibility/media-alt-attr/incorrect.html">Media Alt Attributes -- Incorrect</a>
+          <a class="dropdown-item" href="/accessibility/media-alt-attr/correct.html">Media Alt Attributes -- Correct</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/accessibility/reading-order/incorrect.html">Reading Order -- Incorrect</a>
+          <a class="dropdown-item" href="/accessibility/reading-order/correct.html">Reading Order -- Correct</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/accessibility/form-labels/incorrect.html">Form Labels -- Incorrect</a>
+          <a class="dropdown-item" href="/accessibility/form-labels/correct.html">Form Labels -- Correct</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/accessibility/descriptive-link-text/incorrect.html">Descriptive Link Text -- Incorrect</a>
+          <a class="dropdown-item" href="/accessibility/descriptive-link-text/correct.html">Descriptive Link Text -- Correct</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Animation
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/accessibility/animation/video-incorrect.html">Ability to Pause Videos -- Incorrect</a>
+          <a class="dropdown-item" href="/accessibility/animation/video-correct.html">Ability to Pause Videos -- Correct</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/accessibility/animation/motion-incorrect.html">Request Reduced Motion-- Incorrect</a>
+          <a class="dropdown-item" href="/accessibility/animation/motion-correct.html">Request Reduced Motion -- Correct</a>
         </div>
       </li>
     </ul>
   </div>
 </nav>
-<main id="main" role="main" class="container">
+<main id="main" role="main" class="container py-2">
   <h1>Incorrect: Pages should have a logical reading order</h1>
   If one element comes before another when displayed in a browser, the code should have the same order.
 
@@ -76,10 +125,8 @@
   </ul>
 </main>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
